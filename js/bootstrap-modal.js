@@ -212,7 +212,8 @@
 			var animate = this.$element.hasClass('fade') ? 'fade' : '';
 			
 			if (!this.isLoading) {
-				var doAnimate = $.support.transition && animate;
+				/*
+                var doAnimate = $.support.transition && animate;
 				
 				this.$loading = $('<div class="loading-mask ' + animate + '">')
 					.append(this.options.spinner)
@@ -221,7 +222,7 @@
 				if (doAnimate) this.$loading[0].offsetWidth // force reflow	
 					
 				this.$loading.addClass('in')
-
+                */
 				this.isLoading = true;
 				
 				doAnimate ?
@@ -229,8 +230,9 @@
 					callback();
 
 			} else if (this.isLoading && this.$loading) {
+                /*
 				this.$loading.removeClass('in');
-
+                */
 				var that = this;
 				$.support.transition && this.$element.hasClass('fade')?
 					this.$loading.one($.support.transition.end, function () { that.removeLoading() }) :
@@ -295,6 +297,8 @@
 			this.$element
 				.removeClass('in')
 				.attr('aria-hidden', true);
+
+            this.$element.remove();
 		}
 	}
 
@@ -327,7 +331,7 @@
 		focusOn: null,
 		attentionAnimation: 'shake',
 		manager: 'body',
-		spinner: '<div class="loading-spinner" style="width: 200px; margin-left: -100px;"><div class="progress progress-striped active"><div class="bar" style="width: 100%;"></div></div></div>'
+		spinner: '<div></div>'
 	}
 
 	$.fn.modal.Constructor = Modal

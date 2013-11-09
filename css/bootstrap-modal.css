@@ -47,11 +47,11 @@
 }
 
 .modal.fade {
-	top: -100%;
-	-webkit-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;	
-	   -moz-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
-	     -o-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
-	        transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
+    top: 50%;
+	-webkit-transition: opacity 0.15s ease-in;
+	   -moz-transition: opacity 0.15s ease-in;
+	     -o-transition: opacity 0.15s ease-in;
+	        transition: opacity 0.15s ease-in;
 }
 
 .modal.fade.in {
@@ -69,12 +69,12 @@
 }
 
 .modal .loading-mask {
+    display: none;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #fff;
 	border-radius: 6px;
 }
 
@@ -85,9 +85,9 @@
 
 .modal-backdrop, 
 .modal-backdrop.fade.in{
-	opacity: 0.7;
-	filter: alpha(opacity=70);
-	background: #fff;
+	opacity: 0.35;
+	filter: alpha(opacity=35);
+	background: #000;
 }
 
 .modal.container {
@@ -160,10 +160,7 @@
 }
 
 .loading-spinner {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -12px 0 0 -12px;
+	display: none;
 }
 
 /*
