@@ -9,7 +9,7 @@
 
 .modal-open {
 	position: relative; /* safari */
-	overflow: hidden;
+	overflow: scroll;
 }
 
 
